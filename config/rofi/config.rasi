@@ -1,0 +1,14 @@
+/** rofi config file **/
+ 
+configuration {
+	modi: "drun,run";
+	show-icons: true;
+	sidebar-mode: true;
+	display-run: "  ";
+	display-drun: "  ";
+	display-window: "  ";
+	drun-display-format: "{icon}   {name}";
+}
+
+@theme "~/.config/rofi/breeze-dark.rasi"
+
