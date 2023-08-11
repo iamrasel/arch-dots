@@ -52,6 +52,7 @@ bindsym $mod+Shift+q kill
 
 # A more modern dmenu replacement is rofi:
 bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+Escape exec --no-startup-id rofi -show power-menu -modi power-menu:rofi-power-menu -theme spotlight-dark
 
 # change focus
 bindsym $mod+j focus left
@@ -153,13 +154,8 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-##Binds for container and workspace auto startups
-assign [class="URxvt"] $ws1
-assign [class="Alacritty"] $ws1
-assign [class="Pcmanfm"] $ws1
-assign [class="Pluma"] $ws1
-assign [class="Chromium"] $ws2
-assign [class="Pamac-manager"] $ws2
+# binds for container and workspace auto startups
+#assign [class="Alacritty"] $ws1
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -197,17 +193,18 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 bindsym Print exec scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png
 
-# class                 border  backgr. text    indicator child_border
-client.focused          #4c789900 #1D3353 #ffffff #2e9ef4   #285577
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-client.background       #ffffff
+# Theme colors
+# class                   border  backgr. text    indic.   child_border
+  client.focused          #81A1C1 #81A1C1 #2E3440 #D8DEE9
+  client.focused_inactive #2E3440 #2E3440 #88C0D0 #454948
+  client.unfocused        #2E3440 #2E3440 #88C0D0 #454948
+  client.urgent           #D08770 #3B4252 #88C0D0 #268BD2
+  client.placeholder      #000000 #0c0c0c #ffffff #000000
+  client.background       #3B4252
 
 # i3-gaps
 gaps outer -1
-gaps inner 7
+gaps inner 4
 smart_gaps on
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -232,13 +229,16 @@ bar {
         bindsym button3 exec --no-startup-id i3lock-fancy | xset dpms force off
         
         colors {
-    		separator #268bd200
-    		background #2E343600
-    		statusline #eeeeee
-    		focused_workspace #fdf6e3 #6c71c4 #fdf6e3
-    		active_workspace #fdf6e3 #6c71c4 #fdf6e3
-    		inactive_workspace #002b36 #586e75 #002b36
-    		urgent_workspace #d33682 #d33682 #fdf6e3
+    		background #3B425200
+            statusline #ECEFF4
+            separator  #81A1C100
+
+            # class            border  backgr. text
+            focused_workspace  #81A1C1 #2E3440 #ECEFF4
+            active_workspace   #81A1C1 #2E3440 #ECEFF4
+            inactive_workspace #3B4252 #3B4252 #ECEFF4
+            binding_mode       #D08770 #3B4252 #ECEFF4
+            urgent_workspace   #D08770 #D08770 #ECEFF4
   }
 }
 

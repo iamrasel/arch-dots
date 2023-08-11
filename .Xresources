@@ -117,7 +117,7 @@
 
 
 URxvt*termName: rxvt-unicode-256color
-URxvt.font: URxvt.font: xft:UbuntuMono Nerd Font:size=12,xft:Monospace:size=12:antialias=true:hinting=true
+URxvt.font: URxvt.font: xft:UbuntuMono Nerd Font:size=14,xft:Monospace:size=16:antialias=true:hinting=true
 !!URxvt.letterSpace: 2
 URxvt*.transparent: true
 URxvt*.shading: 30

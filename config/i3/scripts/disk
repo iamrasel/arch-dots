@@ -19,5 +19,5 @@ fi
 
 #Mouse actions for the block
 case $BLOCK_BUTTON in
-	3) pcmanfm ~/;;
+	3) thunar ~/;;
 esac

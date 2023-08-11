@@ -10,5 +10,4 @@ configuration {
 	drun-display-format: "{icon}   {name}";
 }
 
-@theme "~/.config/rofi/breeze-dark.rasi"
-
+@theme "/home/rasel/.local/share/rofi/themes/windows11-grid-dark.rasi"

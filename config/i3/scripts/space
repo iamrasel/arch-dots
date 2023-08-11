@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo " "
+echo ""
+
+if [[ "${BLOCK_BUTTON}" -eq 3 ]]; then
+  --no-startup-id i3lock-fancy | xset dpms force off
+fi
